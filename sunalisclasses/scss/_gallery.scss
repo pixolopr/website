@@ -1,0 +1,31 @@
+.gallery-slider-for {
+    .gallery-for-image-div {
+        .gallery-image {
+            max-width: 100%;
+            margin: auto;
+        }
+    }
+}
+
+.gallery-slider-nav {
+    .gallery-image-div {
+        outline: none;
+        .gallery-image {
+            max-width: 100%;
+            max-height: 300px;
+            margin: auto;
+            border: 4px solid #ffc107;
+            border-radius: 4px;
+            transform: scale(0.7);
+            transition: 0.4s all;
+        }
+    }
+    .slick-current {
+        .gallery-image {
+            transform: scale(0.9);
+            border: none;
+            z-index: 999;
+            box-shadow: 0 0 4px rgba(51, 51, 51, 0.50);
+        }
+    }
+}

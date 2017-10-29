@@ -1,0 +1,46 @@
+// Styling for the footer
+footer {
+    padding: 25px 0;
+    text-align: center;
+    color: fade-out(white, .7);
+    background-color: $theme-primary;
+    p {
+        font-size: 12px;
+        margin: 0;
+    }
+    ul {
+        margin-bottom: 0;
+        li {
+            a {
+                font-size: 12px;
+                color: fade-out(white, .7);
+                &:hover,
+                &:focus,
+                &:active,
+                &.active {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+.sunalis-footer {
+    background-image: url(../img/cloud-footer.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 24%;
+    .row {
+        margin: 16% 0 0 0;
+        color: $theme-primary;
+        .copyright {
+            float: left;
+        }
+        .icons {
+            text-align: center;
+        }
+        .pixolo {
+            float: right;
+        }
+    }
+}

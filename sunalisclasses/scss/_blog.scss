@@ -1,0 +1,60 @@
+.blog-div {
+    cursor: pointer;
+    .blog-image-div {
+        position: relative;
+        .blog-image {
+            margin-bottom: 25px;
+            border-radius: 3px;
+            max-height: 190px;
+            max-width: 90%;
+            text-align: center;
+        }
+        .blog-date {
+            margin: 0;
+            font-size: 15px;
+            height: 26px;
+            position: absolute;
+            top: 65%;
+            left: 5%;
+            background: red;
+            padding: 2px 10px;
+            box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.43);
+            color: white;
+            font-family: sans-serif;
+            font-weight: 500;
+        }
+    }
+    .blog-title {
+        margin-bottom: 20px;
+        color: $gray;
+    }
+    .blog-summary {
+        font-size: 0.9em;
+        padding: 0 20px;
+        color: $gray-light;
+    }
+}
+
+.blog-dots {
+    li {
+        display: inline-block;
+        margin: 0px 5px;
+        button {
+            border-radius: 100%;
+            outline: 0;
+            border: 0;
+            content: '';
+            height: 11px;
+            width: 11px;
+            background: $gray-lighter;
+            color: $gray-light;
+            font-size: 0;
+            cursor: pointer;
+        }
+    }
+    .slick-active {
+        button {
+            background: $gray-light !important;
+        }
+    }
+}
