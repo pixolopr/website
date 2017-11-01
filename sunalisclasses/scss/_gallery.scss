@@ -1,4 +1,6 @@
 .gallery-slider-for {
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.84);
     .gallery-for-image-div {
         .gallery-image {
             max-width: 100%;
@@ -27,5 +29,35 @@
             z-index: 999;
             box-shadow: 0 0 4px rgba(51, 51, 51, 0.50);
         }
+    }
+}
+
+.gallery-next-button {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    border-radius: 100%;
+    border: 1px $theme-primary solid;
+    background: white;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    i {
+        color: $theme-primary;
+    }
+}
+
+.gallery-prev-button {
+    position: absolute;
+    left: 0;
+    top: 42%;
+    border-radius: 100%;
+    border: 1px $theme-primary solid;
+    background: white;
+    padding: 3px;
+    width: 30px;
+    height: 30px;
+    i {
+        color: $theme-primary;
     }
 }

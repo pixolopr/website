@@ -230,6 +230,30 @@ header.masthead {
       header.masthead .device-container {
         max-width: 325px; } }
 
+.inqappframe:-webkit-scrollbar {
+  width: 0px; }
+
+.try-button {
+  display: flex;
+  align-content: center;
+  font-size: 21px !important;
+  border-bottom: 2px white solid;
+  width: 62%;
+  padding: 15px !important;
+  border-top: 2px white solid;
+  background: rgba(255, 255, 255, 0.11); }
+  .try-button i {
+    font-size: 30px;
+    padding: 0px 10px;
+    animation: showright 1s infinite;
+    -webkit-animation: showright 1s infinite; }
+
+@keyframes showright {
+  0% {
+    margin-left: 0px; }
+  100% {
+    margin-left: 10px; } }
+
 section.download {
   position: relative;
   padding: 150px 0; }
@@ -324,20 +348,11 @@ section.download {
   z-index: 8; }
 
 .topper-left-page {
-  transform-origin: right;
   background: white;
-  backface-visibility: hidden;
-  z-index: 1;
-  position: absolute;
-  right: 0;
   box-shadow: 0px 0px 5px rgba(45, 43, 43, 0.86);
   text-align: center;
-  width: 60%;
-  float: right;
-  border-top-left-radius: 14px;
-  border-bottom-left-radius: 14px;
-  height: 20em;
-  transition: 0.4s all; }
+  width: 100%;
+  height: 300px; }
   .topper-left-page .batch-text {
     color: grey;
     font-weight: 500;
@@ -474,6 +489,59 @@ section.download {
     text-align: center;
     margin: auto; }
 
+.book {
+  position: relative;
+  width: 60%;
+  height: 300px;
+  background: white;
+  border-radius: 12px;
+  perspective: 1000px;
+  margin: auto; }
+
+.full-page {
+  width: 50%;
+  position: absolute;
+  right: 0;
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+  transform-origin: left;
+  height: 300px;
+  transform-style: preserve-3d;
+  transition: all 1s; }
+
+.full-page-1 {
+  transform: rotateY(-180deg);
+  z-index: 1; }
+
+.full-page-2 {
+  transform: rotateY(0deg);
+  z-index: 1; }
+
+.full-page-3 {
+  transform: rotateY(0deg);
+  z-index: 1; }
+
+.page {
+  width: 100%;
+  height: 100%;
+  color: black;
+  position: absolute;
+  backface-visibility: hidden;
+  right: 0;
+  border: 1px #777777 solid;
+  overflow: hidden; }
+
+.front {
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+  background-size: cover;
+  background-position: center; }
+
+.back {
+  transform: rotateY(180deg);
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px; }
+
 section.features .section-heading {
   margin-bottom: 100px; }
   section.features .section-heading h2 {
@@ -515,9 +583,12 @@ section.features .feature-item {
   .feature-row .feature-image {
     width: 100%; }
 
-.gallery-slider-for .gallery-for-image-div .gallery-image {
-  max-width: 100%;
-  margin: auto; }
+.gallery-slider-for {
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.84); }
+  .gallery-slider-for .gallery-for-image-div .gallery-image {
+    max-width: 100%;
+    margin: auto; }
 
 .gallery-slider-nav .gallery-image-div {
   outline: none; }
@@ -535,6 +606,32 @@ section.features .feature-item {
   border: none;
   z-index: 999;
   box-shadow: 0 0 4px rgba(51, 51, 51, 0.5); }
+
+.gallery-next-button {
+  position: absolute;
+  right: 0;
+  top: 40%;
+  border-radius: 100%;
+  border: 1px #00d2df solid;
+  background: white;
+  padding: 3px;
+  width: 30px;
+  height: 30px; }
+  .gallery-next-button i {
+    color: #00d2df; }
+
+.gallery-prev-button {
+  position: absolute;
+  left: 0;
+  top: 42%;
+  border-radius: 100%;
+  border: 1px #00d2df solid;
+  background: white;
+  padding: 3px;
+  width: 30px;
+  height: 30px; }
+  .gallery-prev-button i {
+    color: #00d2df; }
 
 section.cta {
   position: relative;
