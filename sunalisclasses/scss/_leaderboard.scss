@@ -39,12 +39,18 @@ $card-height: 300px;
         font-weight: 500;
         font-size: 1em;
         margin: 1% 0%;
+        @media screen and (max-width: $break-tablet) {
+            font-size: 0.8em;
+        }
     }
     .topper-page-name {
         color: $theme-primary;
         margin: 2% 0%;
         font-size: 1.6em;
         font-weight: 600;
+        @media screen and (max-width: $break-tablet) {
+            font-size: 1em;
+        }
     }
     .topper-name-line {
         width: 20%;
@@ -59,14 +65,35 @@ $card-height: 300px;
         margin: 0px;
         height: 1.4em;
         font-weight: 600;
+        @media screen and (max-width: $break-tablet) {
+            font-size: 0.8em;
+        }
+    }
+    .marks {
+        font-size: 2em !important;
+        margin-bottom: 25px;
+        color: $theme-primary;
+        @media screen and (max-width: $break-tablet) {
+            font-size: 1.2em !important;
+            margin-bottom: 10px;
+        }
     }
     .topper-achievement-text {
-        color: $theme-primary;
         font-weight: 500;
-        font-size: 1.6em;
+        font-size: 1.2em;
         margin: 0px;
+        @media screen and (max-width: $break-tablet) {
+            font-size: 0.8em;
+        }
         &:first-child {
-            margin-top: 15px !important;
+            margin-top: 20px !important;
+        }
+    }
+    .school {
+        font-size: 1.6em !important;
+        color: $theme-primary;
+        @media screen and (max-width: $break-tablet) {
+            font-size: 1.2em !important;
         }
     }
 }
@@ -106,6 +133,9 @@ $card-height: 300px;
     width: 5%;
     margin: 1.5% 0.7%;
     text-align: center;
+    @media screen and (max-width: $break-tablet) {
+        width: 15%;
+    }
 }
 
 .other-topper-image {
@@ -206,6 +236,9 @@ $card-height: 300px;
     border-radius: 12px;
     perspective: 1000px;
     margin: auto;
+    @media screen and (max-width: $break-tablet) {
+        width: 96%;
+    }
 }
 
 .full-page {
@@ -218,6 +251,9 @@ $card-height: 300px;
     height: $card-height;
     transform-style: preserve-3d;
     transition: all 1s;
+    @media screen and (max-width: $break-tablet) {
+        height: 200px;
+    }
 }
 
 .full-page-1 {

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>INQ - Powered By Sunalis Classes</title>
+    <!--Favicon-->
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+
+    <!-- Custom fonts for this template -->
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="../device-mockups/device-mockups.min.css">
+
+    <style>
+        @font-face {
+            font-family: Cera;
+            src: url(../css/Cera.otf);
+        }
+
+    </style>
+
+</head>
+
+<body id="" style="color: #fff;
+    background: url(../img/bg-pattern.png),#ffe900;
+    background: url(../img/bg-pattern.png),-webkit-linear-gradient(to left,#00d2df,#00949d);
+    background: url(../img/bg-pattern.png),linear-gradient(to left,#00d2df,#00949d);">
+
+    <div style="    width: 30%;
+    display: inline-block;
+    position: absolute;
+    font-size: 2em;
+    text-align: center;
+    line-height: 3em;
+    top: 30%;">
+        <h1 style="font-family: Cera">INQ on your Internet Browser</h1>
+    </div>
+    <div style="height: 95vh;width: 30%; margin: auto; display: table">
+
+
+        <div class="device-container" style="vertical-align: middle;display: table-cell;">
+            <div class="device-mockup portrait white iphone6_plus">
+                <div class="device">
+                    <div class="screen">
+                        <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                        <iframe id="appiframe" class="inqappframe" src="http://sunalisclasses.com/doubtsachehai/platforms/browser/www/" style="height: 100%;width: 100%"></iframe>
+
+                    </div>
+                    <div id="home-button" class="button" onclick="refreshiframe()">
+                        <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div style="    width: 30%;
+    display: inline-block;
+    position: absolute;
+    font-size: 2em;
+    text-align: center;
+    line-height: 3em;
+    top: 30%;
+           right: 0;">
+        <img src="../img/main-logo.png" width="90%" />
+        <h1 style="font-family: Cera">#DoubtsAcheHai</h1>
+    </div>
+
+    <script>
+        var refreshiframe = function() {
+            var iframe = document.getElementById('appiframe');
+            iframe.src = iframe.src;
+        }
+
+    </script>
+
+
+    <script type="text/javascript">
+        if (screen.width <= 699) {
+            document.location = "http://sunalisclasses.com/doubtsachehai/platforms/browser/www/";
+        }
+
+    </script>
+
+    <script language=javascript>
+        if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+            location.replace("http://sunalisclasses.com/doubtsachehai/platforms/browser/www/");
+        }
+
+    </script>
+</body>
+
+</html>

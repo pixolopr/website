@@ -57,19 +57,27 @@ header.masthead {
     padding: 15px !important;
     border-top: 2px white solid;
     background: rgba(255, 255, 255, 0.11);
+    @media screen and (max-width: $break-tablet) {
+        margin: auto;
+    }
     i {
         font-size: 30px;
         padding: 0px 10px;
         animation: showright 1s infinite;
         -webkit-animation: showright 1s infinite;
+        @media screen and (max-width: $break-tablet) {
+            display: none;
+            animation: none;
+            -webkit-animation: none;
+        }
     }
 }
 
-@keyframes showright{
+@keyframes showright {
     0% {
         margin-left: 0px;
     }
-    100%{
+    100% {
         margin-left: 10px;
     }
 }

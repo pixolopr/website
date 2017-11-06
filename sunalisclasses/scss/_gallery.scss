@@ -2,9 +2,14 @@
     border-radius: 3px;
     background: rgba(0, 0, 0, 0.84);
     .gallery-for-image-div {
-        .gallery-image {
+        padding: 6px;
+        .gallery-for-image {
+            max-height: 460px;
             max-width: 100%;
             margin: auto;
+            @media screen and (max-width: $break-tablet) {
+                max-height: 200px;
+            }
         }
     }
 }

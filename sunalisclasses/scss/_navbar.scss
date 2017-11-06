@@ -7,6 +7,9 @@
     .navbar-brand {
         color: $theme-tertiary;
         @include heading-font;
+        @medi screen and (max-width: $break-tablet) {
+            width: 50%;
+        }
         &:hover,
         &:focus {
             color: darken($theme-primary, 10%);
@@ -18,8 +21,8 @@
         color: $gray-darker;
     }
     .navbar-nav {
-        > li {
-            > a {
+        >li {
+            >a {
                 font-size: 11px;
                 @include alt-font;
                 &.active {
@@ -30,8 +33,8 @@
                     }
                 }
             }
-            > a,
-            > a:focus {
+            >a,
+            >a:focus {
                 color: $gray-darker;
                 &:hover {
                     color: $theme-primary;
@@ -49,8 +52,8 @@
                 color: white;
             }
         }
-        .navbar-nav > li > a,
-        .navbar-nav > li > a:focus {
+        .navbar-nav>li>a,
+        .navbar-nav>li>a:focus {
             color: fade-out(white, .3);
             &:hover {
                 color: white;
@@ -66,8 +69,8 @@
                     color: $theme-primary;
                 }
             }
-            .navbar-nav > li > a,
-            .navbar-nav > li > a:focus {
+            .navbar-nav>li>a,
+            .navbar-nav>li>a:focus {
                 color: $gray-darker;
                 &:hover {
                     color: $theme-primary;

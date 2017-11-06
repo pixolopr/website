@@ -124,7 +124,7 @@ p {
   margin-bottom: 20px; }
 
 section {
-  padding: 100px 0; }
+  padding: 20px 0; }
   section h2 {
     font-size: 50px; }
 
@@ -145,6 +145,10 @@ section {
     font-family: 'Cera','Catamaran', 'Helvetica', 'Arial', 'sans-serif';
     font-weight: 200;
     letter-spacing: 1px; }
+
+@medi screen and (max-width: $break-tablet) {
+  #mainNav .navbar-brand {
+    width: 50%; } }
     #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
       color: #00a2ac; }
   #mainNav .navbar-toggler {
@@ -242,11 +246,19 @@ header.masthead {
   padding: 15px !important;
   border-top: 2px white solid;
   background: rgba(255, 255, 255, 0.11); }
+  @media screen and (max-width: 990px) {
+    .try-button {
+      margin: auto; } }
   .try-button i {
     font-size: 30px;
     padding: 0px 10px;
     animation: showright 1s infinite;
     -webkit-animation: showright 1s infinite; }
+    @media screen and (max-width: 990px) {
+      .try-button i {
+        display: none;
+        animation: none;
+        -webkit-animation: none; } }
 
 @keyframes showright {
   0% {
@@ -358,11 +370,17 @@ section.download {
     font-weight: 500;
     font-size: 1em;
     margin: 1% 0%; }
+    @media screen and (max-width: 990px) {
+      .topper-left-page .batch-text {
+        font-size: 0.8em; } }
   .topper-left-page .topper-page-name {
     color: #00d2df;
     margin: 2% 0%;
     font-size: 1.6em;
     font-weight: 600; }
+    @media screen and (max-width: 990px) {
+      .topper-left-page .topper-page-name {
+        font-size: 1em; } }
   .topper-left-page .topper-name-line {
     width: 20%;
     text-align: center;
@@ -375,13 +393,32 @@ section.download {
     margin: 0px;
     height: 1.4em;
     font-weight: 600; }
+    @media screen and (max-width: 990px) {
+      .topper-left-page .topper-marks-text {
+        font-size: 0.8em; } }
+  .topper-left-page .marks {
+    font-size: 2em !important;
+    margin-bottom: 25px;
+    color: #00d2df; }
+    @media screen and (max-width: 990px) {
+      .topper-left-page .marks {
+        font-size: 1.2em !important;
+        margin-bottom: 10px; } }
   .topper-left-page .topper-achievement-text {
-    color: #00d2df;
     font-weight: 500;
-    font-size: 1.6em;
+    font-size: 1.2em;
     margin: 0px; }
+    @media screen and (max-width: 990px) {
+      .topper-left-page .topper-achievement-text {
+        font-size: 0.8em; } }
     .topper-left-page .topper-achievement-text:first-child {
-      margin-top: 15px !important; }
+      margin-top: 20px !important; }
+  .topper-left-page .school {
+    font-size: 1.6em !important;
+    color: #00d2df; }
+    @media screen and (max-width: 990px) {
+      .topper-left-page .school {
+        font-size: 1.2em !important; } }
 
 .topper-right-page {
   transform: rotateY(0deg);
@@ -414,6 +451,9 @@ section.download {
   width: 5%;
   margin: 1.5% 0.7%;
   text-align: center; }
+  @media screen and (max-width: 990px) {
+    .other-topper-div {
+      width: 15%; } }
 
 .other-topper-image {
   cursor: pointer;
@@ -497,6 +537,9 @@ section.download {
   border-radius: 12px;
   perspective: 1000px;
   margin: auto; }
+  @media screen and (max-width: 990px) {
+    .book {
+      width: 96%; } }
 
 .full-page {
   width: 50%;
@@ -508,6 +551,9 @@ section.download {
   height: 300px;
   transform-style: preserve-3d;
   transition: all 1s; }
+  @media screen and (max-width: 990px) {
+    .full-page {
+      height: 200px; } }
 
 .full-page-1 {
   transform: rotateY(-180deg);
@@ -586,9 +632,15 @@ section.features .feature-item {
 .gallery-slider-for {
   border-radius: 3px;
   background: rgba(0, 0, 0, 0.84); }
-  .gallery-slider-for .gallery-for-image-div .gallery-image {
-    max-width: 100%;
-    margin: auto; }
+  .gallery-slider-for .gallery-for-image-div {
+    padding: 6px; }
+    .gallery-slider-for .gallery-for-image-div .gallery-for-image {
+      max-height: 460px;
+      max-width: 100%;
+      margin: auto; }
+      @media screen and (max-width: 990px) {
+        .gallery-slider-for .gallery-for-image-div .gallery-for-image {
+          max-height: 200px; } }
 
 .gallery-slider-nav .gallery-image-div {
   outline: none; }
