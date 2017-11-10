@@ -23,10 +23,16 @@
     <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 
     <!-- Plugin CSS -->
-    <link rel="stylesheet" href="device-mockups/device-mockups.min.css">
+    <link rel="stylesheet" href="device-mockups/device-mockups.min.css?v=2">
 
     <!-- Custom styles for this template -->
-    <link href="css/new-age.min.css" rel="stylesheet">
+    <link href="css/new-age.css" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+
+    <!--Animate Css -->
+    <link href="vendor/animate/animate.css" rel="stylesheet">
 
 </head>
 
@@ -42,7 +48,7 @@
         </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
+                    <li class="nav-item" style="min-width: 100px">
                         <a class="nav-link js-scroll-trigger" href="#download">About Us</a>
                     </li>
                     <li class="nav-item">
@@ -71,13 +77,15 @@
     <header class="masthead">
         <div class="container h-100">
             <div class="row h-100">
-                <div class="col-lg-7 my-auto">
+                <div class="col-lg-8 my-auto">
                     <div class="header-content mx-auto">
                         <h1 class="mb-5">The Smartest <br> CBSE & NCERT <br> Tuitions in Ahmedabad</h1>
-                        <div class="btn-xl js-scroll-trigger try-button">Try INQ for now Free <i class="icon-arrow-right-circle"></i></div>
+                        <a href="http://sunalisclasses.com/doubts/">
+                            <div class="btn-xl js-scroll-trigger try-button" style="color: white;">Solve your doubts for Free <i class="icon-arrow-right-circle"></i></div>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-5 my-auto">
+                <div class="col-lg-4 my-auto">
                     <div class="device-container">
                         <div class="device-mockup portrait white">
                             <div class="device">
@@ -97,7 +105,113 @@
         </div>
     </header>
 
-    <section class="features" id="features">
+    <script>
+        $(document).ready(function() {
+            var mobiles = ['iphone6_plus', 'galaxy_s5', 'lumia920'];
+            var random = Math.floor(Math.random() * 3) + 1
+            $('.device-mockup').addClass(mobiles[random - 1]);
+        })
+
+    </script>
+
+    <section class="aboutus-section" id="aboutus">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2>About Us</h2>
+                <hr>
+            </div>
+
+            <div class="row">
+
+                <div class="about-us-years-div">
+                    <div class="year-text active" data-cardid="1">2003</div>
+                    <div class="year-text" data-cardid="2">2007</div>
+                    <div class="year-text" data-cardid="3">2010</div>
+                    <div class="year-text" data-cardid="4">2014</div>
+                    <div class="year-text" data-cardid="5">2015</div>
+                    <div class="year-text" data-cardid="6">2017</div>
+                    <div class="year-text" data-cardid="7">Today</div>
+                </div>
+                <div class="about-us-cards-div">
+                    <div class="card about-card1 animated scroll-style" style="z-index:8">
+                        <p>Why do most innovations these days not happen in India? Why are the biggest technology firms based out of the west? Why do people of the Indian origin perform so well in the west? Large number of these observations boiled down to one simple hypothesis - The education system in India. One where the syllabus is determined by the questions marked in the textbook and the best student is the one who knows the book by heart instead of the one who is truly inquisitive. Disturbed by these observations, Sunali Gandhi born, brought up and educated in Mumbai decided to take a small step by voluntarily providing educational aids to some of the students in CBSE schools in Ahmedabad</p>
+                    </div>
+                    <div class="card about-card2 animated scroll-style" style="z-index:7">
+                        <p>As awareness about the quality of CBSE education (NCERT syllabus) increased, more and more students sought the help of Sunali Ma'am dissatisfied with the education quality in their schools</p>
+                    </div>
+                    <div class="card about-card3 animated scroll-style" style="z-index:6">
+                        <p>With exponentially increasing number of students, a need was felt to step out to a more central location which was designed for learning and more convenient for the students. Sunali's Classes was born to a larger world in Jaydeep Complex. Right from the start, we have believed in using the best technology to aid learning and we pioneered using Smart Interactive Board at our class for engaging studying</p>
+                    </div>
+                    <div class="card about-card4 animated scroll-style" style="z-index:5">
+                        <p>As more & more batches passed out of Sunali's Classes with incredible results - not just in Board exams but also in the test of the real world, the demand for Sunali's Classes grew multifold. Social Studies & English were also added to the fold. </p>
+                    </div>
+                    <div class="card about-card5 animated scroll-style" style="z-index:4">
+                        <p>To be more accessible to larger set of students, the education area of the classes was almost doubled every year since then till today and yet, the quest for real knowledge was visible by how soon our seats got filled</p>
+                    </div>
+                    <div class="card about-card6 animated scroll-style" style="z-index:3">
+                        <p>Strengthening the original vision of the classes, a major milestone was achieved when an exclusive Mobile App was launched specifically to encourage students to ask doubts and get utmost clarity - strengthening the original vision - #DoubtsAchheHain. The application has been a platform where tens of thousands of doubts sessions have been successfully completed</p>
+                    </div>
+                    <div class="card about-card7 animated scroll-style" style="z-index:2">
+                        <p>We now have 6 separate class areas with dedicated space for focused learning & revision for students. A faculty strength of ~15 which have been handpicked for their experience & quality of teaching. We now teach 8-10th Standard students for Maths, Science, Social Studies & English for CBSE & NCERT boards. And yet this is just the beginning. We are in the process of launching a revolutionary & proprietary online platform to personalize learning for the students in terms of learning cards, tests & report cards. Stay tuned for more updates.</p>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                var aci = 1;
+
+                var dropcards = function(i) {
+                    var dropping = setInterval(function() {
+                        $('.about-card' + aci).addClass('hinge').removeClass('rollIn');
+                        $('*[data-cardid="' + aci + '"]').removeClass('active');
+                        $('*[data-cardid="' + (aci + 1) + '"]').addClass('active');
+                        aci++
+                        if (aci == i) {
+                            clearInterval(dropping);
+                        }
+                        if (aci > 7) {
+                            aci = 7;
+                        }
+
+                    }, 800);
+                };
+
+                var getcards = function(i) {
+                    var getting = setInterval(function() {
+
+                        $('.about-card' + (aci - 1)).addClass('rollIn').removeClass('hinge');
+                        $('*[data-cardid="' + aci + '"]').removeClass('active');
+                        $('*[data-cardid="' + (aci - 1) + '"]').addClass('active');
+
+                        aci--;
+                        if (aci == i) {
+                            clearInterval(getting);
+                        }
+
+                    }, 800);
+                };
+
+
+
+
+                $('.year-text').click(function() {
+                    var selectedcard = $(this).data('cardid');
+                    if (selectedcard != aci) {
+                        if (selectedcard > aci) {
+                            dropcards(selectedcard);
+                        } else {
+                            getcards(selectedcard);
+                        };
+                    };
+                });
+
+            </script>
+        </div>
+    </section>
+
+    <img src="img/wall.png" width="100%" />
+
+    <section class="features mobile-show" id="features">
         <div class="container">
             <div class="section-heading text-center">
                 <h2>Why us?</h2>
@@ -105,11 +219,60 @@
                 <hr>
             </div>
             <div class="row feature-row">
-                <div class="col-md-6 col-sm-12 col-sm-push-12  feature-description-div">
+                <div class="col-lg-6 col-lg-push-6 col-md-6 col-sm-12 col-sm-pull-12  feature-image-div">
+                    <img src="img/specialised-teachers.jpg" class="feature-image">
+                </div>
+                <div class="col-lg-6 col-lg-push-6 col-md-6 col-sm-12 col-sm-push-12  feature-description-div">
                     <h3 class="feature-title">Expert CBSE & NCERT Faculty</h3>
                     <p class="feature-desc">Specialized expert faculties for respective subjects. Smart teaching methodology (videos, illustrations & demos) for our smart students. We strive to develop students’ mindset and nurture their analytical thinking to be ready for competitive exams.</p>
                 </div>
+            </div>
+            <div class="row feature-row">
+                <div class="col-md-6 feature-image-div">
+                    <img src="img/rigourous-training.png" class="feature-image">
+                </div>
+                <div class="col-md-6 feature-description-div">
+                    <h3 class="feature-title">Rigorous Training</h3>
+                    <p class="feature-desc">
+                        Daily class (Monday to Saturday) for Maths and Science for seamless studying. Weekly 10+1 hours of rigorous teaching sessions for Maths and Science & 4 hours for Social Studies & English. Tests shall be conducted regularly and results shall be communicated immediately.</p>
+                </div>
+            </div>
+            <div class="row feature-row">
                 <div class="col-md-6 col-sm-12 col-sm-pull-12  feature-image-div">
+                    <img src="img/livechat-animation.gif" class="feature-image">
+                </div>
+                <div class="col-md-6 col-sm-12 col-sm-push-12 feature-description-div">
+                    <h3 class="feature-title">24/7 Learning</h3>
+                    <p class="feature-desc">
+                        Our proprietary online platform - INQ enables students to learn anytime from anywhere, take tests & ask doubts. We believe that #DoubtsAchheHein & encourage our students to ask doubts any time on our specially designed Android app – Sunali’s Classes (Google Play Store). In case, student requires interaction with faculty for doubt resolution, that can be done with prior appointment</p>
+                </div>
+            </div>
+            <div class="row feature-row">
+                <div class="col-md-6 col-sm-12 feature-image-div">
+                    <img src="img/personalised-report.jpg" class="feature-image">
+                </div>
+                <div class="col-md-6 feature-description-div">
+                    <h3 class="feature-title">Personalized Tutoring</h3>
+                    <p class="feature-desc">
+                        Every child is special for us! Students will be given all the required extra & special attention. Advanced level of practice sheets and training for students who wish to put in even more effort. Personalized Dashboards & Report cards for students to identify their key strengths & improvement areas</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features mobile-hide" id="features">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2>Why us?</h2>
+                <p class="text-muted">Some of the reasons you might consider choosing us...</p>
+                <hr>
+            </div>
+            <div class="row feature-row">
+                <div class="col-lg-6 col-lg-push-6 col-md-6 col-sm-12 col-sm-push-12  feature-description-div">
+                    <h3 class="feature-title">Expert CBSE & NCERT Faculty</h3>
+                    <p class="feature-desc">Specialized expert faculties for respective subjects. Smart teaching methodology (videos, illustrations & demos) for our smart students. We strive to develop students’ mindset and nurture their analytical thinking to be ready for competitive exams.</p>
+                </div>
+                <div class="col-lg-6 col-lg-push-6 col-md-6 col-sm-12 col-sm-pull-12  feature-image-div">
                     <img src="img/specialised-teachers.jpg" class="feature-image">
                 </div>
             </div>
@@ -265,7 +428,6 @@
         <div class="container">
             <div class="section-heading text-center">
                 <h2>Gallery</h2>
-                <p class="text-muted">Ain't we pretty ?</p>
                 <hr>
             </div>
             <div class="row gallery-slider-for">
@@ -278,6 +440,29 @@
     </section>
 
 
+    <!-- Modal -->
+    <div id="blogModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" style="position: absolute;right: 20px;">&times;</button>
+                    <h4 class="modal-title blog-modal-title">This is Blog Title</h4>
+                </div>
+                <div class="modal-body blog-div">
+                    <div style="position: relative">
+                        <img src="img/blog.jpg" class="mx-auto blog-image blog-modal-image" width="100%" />
+                        <p class="blog-date blog-modal-date" style="padding: 1%;background: red;position: absolute;top: 74%;font-size: 1em;margin: 5px 0px 2px 0px;color: white;box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.72);">29/03/20017</p>
+                    </div>
+                    <p class="blog-modal-blog">This is a brief description about the blog that is mentioned ablove, you will ned to click anywhere on this blog to open it on a seperate page or Popup.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
     <section class="text-center" id="blogs">
         <div class="container">
             <div class="section-heading text-center">
@@ -286,73 +471,27 @@
                 <hr>
             </div>
             <div class="row blogs-row blog-slider">
-                <div class="col-md-4 blog-div">
-                    <div class="blog-image-div">
-                        <img src="img/blog.jpg" alt="" class="mx-auto blog-image">
-                        <p class="blog-date">29/03/20017</p>
-                    </div>
-                    <div class="blog-desc-div">
-                        <h4 class="blog-title">This is Blog Title</h4>
-                        <p class="blog-summary text-center">This is a brief description about the blog that is mentioned ablove, you will ned to click anywhere on this blog to open it on a seperate page or Popup.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 blog-div">
-                    <div class="blog-image-div">
-                        <img src="img/blog.jpg" alt="" class="mx-auto blog-image">
-                        <p class="blog-date">29/03/20017</p>
 
-                    </div>
-                    <div class="blog-desc-div">
-                        <h4 class="blog-title">This is Blog Title</h4>
-                        <p class="blog-summary text-center">This is a brief description about the blog that is mentioned ablove, you will ned to click anywhere on this blog to open it on a seperate page or Popup.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 blog-div">
-                    <div class="blog-image-div">
-                        <img src="img/blog.jpg" alt="" class="mx-auto blog-image">
-                        <p class="blog-date">29/03/20017</p>
-                    </div>
-                    <div class="blog-desc-div">
-                        <h4 class="blog-title">This is Blog Title</h4>
-                        <p class="blog-summary text-center">This is a brief description about the blog that is mentioned ablove, you will ned to click anywhere on this blog to open it on a seperate page or Popup.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 blog-div">
-                    <div class="blog-image-div">
-                        <img src="img/blog.jpg" alt="" class="mx-auto blog-image">
-                        <p class="blog-date">29/03/20017</p>
-                    </div>
-                    <div class="blog-desc-div">
-                        <h4 class="blog-title">This is Blog Title</h4>
-                        <p class="blog-summary text-center">This is a brief description about the blog that is mentioned ablove, you will ned to click anywhere on this blog to open it on a seperate page or Popup.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 blog-div">
-                    <div class="blog-image-div">
-                        <img src="img/blog.jpg" alt="" class="mx-auto blog-image">
-                        <p class="blog-date">29/03/20017</p>
-
-                    </div>
-                    <div class="blog-desc-div">
-                        <h4 class="blog-title">This is Blog Title</h4>
-                        <p class="blog-summary text-center">This is a brief description about the blog that is mentioned ablove, you will ned to click anywhere on this blog to open it on a seperate page or Popup.</p>
-                    </div>
-                </div>
-                <div class="col-md-4 blog-div">
-                    <div class="blog-image-div">
-                        <img src="img/blog.jpg" alt="" class="mx-auto blog-image">
-                        <p class="blog-date">29/03/20017</p>
-                    </div>
-                    <div class="blog-desc-div">
-                        <h4 class="blog-title">This is Blog Title</h4>
-                        <p class="blog-summary text-center">This is a brief description about the blog that is mentioned ablove, you will ned to click anywhere on this blog to open it on a seperate page or Popup.</p>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
 
+    <div id="mapModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" style="position: absolute;right: 20px;">&times;</button>
+                    <h4 class="modal-title">Locate Us On Google Map</h4>
+                </div>
+                <div class="modal-body">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14689.486307783298!2d72.5466115!3d23.0101252!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2c37f6d34a621bb1!2sSunali&#39;s+Classes+-+Smartest+CBSE+Tuitions+in+Ahmedabad!5e0!3m2!1sen!2sin!4v1510065197294" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+
+        </div>
+    </div>
 
 
     <section class="text-center contact-section" id="contact">
@@ -371,7 +510,7 @@
                             <p class="contact-addresss">9, Jaydeep complex, near, Shreyas Railway Crossing Rd, Aayojan Nagar Society, Ahmedabad, Gujarat</p>
                             <p class="contact-label">CONTACT</p>
                             <p class="contact-phone">+91 9427711412</p>
-                            <p class="locateus-text">LOCATE US:</p> <i class="icon-location-pin locate-us-button"></i>
+                            <p class="locateus-text" data-toggle="modal" data-target="#mapModal">LOCATE US:</p> <i class="icon-location-pin locate-us-button" data-toggle="modal" data-target="#mapModal"></i>
                             <p id="distance" class="geolocate-text"></p>
                             <p id="duration" class="geolocate-text"></p>
 
@@ -424,7 +563,6 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
     <!-- Plugin JavaScript -->
@@ -437,7 +575,7 @@
     <script src="js/slick.min.js"></script>
 
     <script type="text/javascript">
-        $('.blog-slider').slick({
+        var blog_slider_init = {
             infinite: true,
             speed: 300,
             slidesToShow: 3,
@@ -472,7 +610,8 @@
                     }
                 }
             ]
-        });
+        };
+        $('.blog-slider').slick(blog_slider_init);
 
     </script>
 
@@ -532,14 +671,7 @@
 
     <script src="js/mail.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            var mobiles = ['iphone6_plus', 'galaxy_s5', 'lumia920'];
-            var random = Math.floor(Math.random() * 3) + 1
-            $('.device-mockup').addClass(mobiles[random - 1]);
-        })
 
-    </script>
 
 
 
@@ -757,6 +889,52 @@
                 }
 
             }
+        });
+
+    </script>
+
+    <!--
+    
+    <div class="row blogs-row blog-slider">
+                <div class="col-md-4 blog-div"><div class="blog-image-div"><img src="'++'" alt="" class="mx-auto blog-image"><p class="blog-date">'++'</p></div><div class="blog-desc-div"><h4 class="blog-title">'++'</h4><p class="blog-summary text-center">'++'</p></div></div>
+    
+    -->
+
+
+    <script>
+        firebase.database().ref('/blogs').once('value').then(function(snapshot) {
+            console.log(snapshot.val());
+
+            var blogs = snapshot.val();
+
+            for (var bi = 1; bi < blogs.length; bi++) {
+                console.log(blogs[bi]);
+
+                $('.blog-slider').append('<div class="col-md-4 blog-div" data-blogid="' + bi + '"  data-toggle="modal" data-target="#blogModal"><div class="blog-image-div"><img src="' + blogs[bi].image + '" alt="" class="mx-auto blog-image"><p class="blog-date">' + blogs[bi].date + '</p></div><div class="blog-desc-div"><h4 class="blog-title">' + blogs[bi].title + '</h4><p class="blog-summary text-center">' + blogs[bi].blog + '</p></div></div>');
+
+
+                $('.blog-slider').slick('unslick');
+                $('.blog-slider').slick(blog_slider_init);
+
+
+                if (bi == blogs.length - 1) {
+                    $('.blog-div').click(function() {
+                        var selectedblog = $(this).data('blogid');
+                        console.log(blogs[selectedblog].title);
+                        $('.blog-modal-title').html(blogs[selectedblog].title);
+                        $('.blog-modal-date').html(blogs[selectedblog].date);
+                        $('.blog-modal-image').attr("src",blogs[selectedblog].image);
+                        $('.blog-modal-blog').html(blogs[selectedblog].blog);
+                    });
+                }
+
+
+            }
+        });
+
+
+        $(document).ready(function() {
+
         });
 
     </script>

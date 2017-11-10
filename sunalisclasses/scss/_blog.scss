@@ -25,11 +25,14 @@
         }
     }
     .blog-title {
+        font-size: 1.1em;
         margin-bottom: 20px;
         color: $gray;
     }
     .blog-summary {
-        font-size: 0.9em;
+        max-height: 97px;
+        overflow: hidden;
+        font-size: 0.8em;
         padding: 0 20px;
         color: $gray-light;
     }

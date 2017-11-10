@@ -1,0 +1,36 @@
+.about-us-years-div {
+    width: 100%;
+    display: block;
+    text-align: center;
+    .year-text {
+        display: inline-block;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    .active {
+        color: white;
+        background: $theme-primary;
+    }
+}
+
+.about-us-cards-div {
+    width: 100%;
+    display: block;
+    margin-top: 10px;
+    min-height: 400px;
+    text-align: center;
+    position: relative;
+    .card {
+        left: 5%;
+        height: 400px;
+        position: absolute;
+        width: 90%;
+        border: 1px solid grey;
+        padding: 15px;
+        overflow-y: auto;
+        p {
+            color: grey;
+        }
+    }
+}

@@ -131,6 +131,27 @@ section {
 .full-width {
   width: 100%; }
 
+@media screen and (max-width: 767px) {
+  .mobile-hide {
+    display: none; } }
+
+@media screen and (min-width: 767px) {
+  .mobile-show {
+    display: none; } }
+
+/*scroll bar*/
+.scroll-style::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5; }
+
+.scroll-style::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5; }
+
+.scroll-style::-webkit-scrollbar-thumb {
+  background-color: #0ae;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent)); }
+
 #mainNav {
   border-color: rgba(34, 34, 34, 0.05);
   background-color: white;
@@ -215,7 +236,7 @@ header.masthead {
     header.masthead .header-content h1 {
       font-size: 30px; }
   header.masthead .device-container {
-    max-width: 325px;
+    max-width: 435px;
     margin-right: auto;
     margin-left: auto; }
     header.masthead .device-container .screen img {
@@ -232,7 +253,7 @@ header.masthead {
         header.masthead .header-content h1 {
           font-size: 50px; }
       header.masthead .device-container {
-        max-width: 325px; } }
+        max-width: 435px; } }
 
 .inqappframe:-webkit-scrollbar {
   width: 0px; }
@@ -242,7 +263,7 @@ header.masthead {
   align-content: center;
   font-size: 21px !important;
   border-bottom: 2px white solid;
-  width: 62%;
+  width: 72%;
   padding: 15px !important;
   border-top: 2px white solid;
   background: rgba(255, 255, 255, 0.11); }
@@ -265,6 +286,37 @@ header.masthead {
     margin-left: 0px; }
   100% {
     margin-left: 10px; } }
+
+.about-us-years-div {
+  width: 100%;
+  display: block;
+  text-align: center; }
+  .about-us-years-div .year-text {
+    display: inline-block;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer; }
+  .about-us-years-div .active {
+    color: white;
+    background: #00d2df; }
+
+.about-us-cards-div {
+  width: 100%;
+  display: block;
+  margin-top: 10px;
+  min-height: 400px;
+  text-align: center;
+  position: relative; }
+  .about-us-cards-div .card {
+    left: 5%;
+    height: 400px;
+    position: absolute;
+    width: 90%;
+    border: 1px solid grey;
+    padding: 15px;
+    overflow-y: auto; }
+    .about-us-cards-div .card p {
+      color: grey; }
 
 section.download {
   position: relative;
@@ -311,10 +363,13 @@ section.download {
       font-family: sans-serif;
       font-weight: 500; }
   .blog-div .blog-title {
+    font-size: 1.1em;
     margin-bottom: 20px;
     color: #555555; }
   .blog-div .blog-summary {
-    font-size: 0.9em;
+    max-height: 97px;
+    overflow: hidden;
+    font-size: 0.8em;
     padding: 0 20px;
     color: #777777; }
 
@@ -631,7 +686,7 @@ section.features .feature-item {
 
 .gallery-slider-for {
   border-radius: 3px;
-  background: rgba(0, 0, 0, 0.84); }
+  background: #f7f7f7; }
   .gallery-slider-for .gallery-for-image-div {
     padding: 6px; }
     .gallery-slider-for .gallery-for-image-div .gallery-for-image {
