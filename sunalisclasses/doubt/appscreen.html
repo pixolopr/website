@@ -32,46 +32,54 @@
     background: url(../img/bg-pattern.png),-webkit-linear-gradient(to left,#00d2df,#00949d);
     background: url(../img/bg-pattern.png),linear-gradient(to left,#00d2df,#00949d);">
 
-    <div style="    width: 30%;
-    display: inline-block;
+
+    <div style="display: table; width: 100%">
+
+
+        <div style="    width: 30%;
+    display: table-cell;
     position: absolute;
     font-size: 2em;
     text-align: center;
     line-height: 3em;
     top: 30%;">
-        <h1 style="font-family: Cera">INQ on your Internet Browser</h1>
-    </div>
-    <div style="height: 95vh;width: 30%; margin: auto; display: table">
+            <h1 style="font-family: Cera">INQ on your Internet Browser</h1>
+        </div>
+        <div style="height: 95vh;width: 40%; display: table-cell">
+            <div style="height: 100vh;">
 
+                <div class="device-container" style="">
+                    <div class="device-mockup portrait white iphone6_plus">
+                        <div class="device" style="    max-height: 95vh;margin-top: 2vh;">
+                            <div class="screen">
+                                <iframe id="appiframe" class="inqappframe" src="http://sunalisclasses.com/doubtsachehai/platforms/browser/www/" style="height: 100%;width: 100%"></iframe>
 
-        <div class="device-container" style="vertical-align: middle;display: table-cell;">
-            <div class="device-mockup portrait white iphone6_plus">
-                <div class="device">
-                    <div class="screen">
-                        <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                        <iframe id="appiframe" class="inqappframe" src="http://sunalisclasses.com/doubtsachehai/platforms/browser/www/" style="height: 100%;width: 100%"></iframe>
-
-                    </div>
-                    <div id="home-button" class="button" onclick="refreshiframe()">
-                        <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                            </div>
+                            <div id="home-button" class="button" onclick="refreshiframe()">
+                            </div>
+                        </div>
                     </div>
                 </div>
+
             </div>
+
+
         </div>
-
-
-    </div>
-    <div style="    width: 30%;
-    display: inline-block;
+        <div style="    width: 30%;
+    display: table-cell;
     position: absolute;
     font-size: 2em;
     text-align: center;
     line-height: 3em;
     top: 30%;
            right: 0;">
-        <img src="../img/main-logo.png" width="90%" />
-        <h1 style="font-family: Cera">#DoubtsAcheHai</h1>
+            <img src="../img/main-logo.png" width="90%" />
+            <h1 style="font-family: Cera">#DoubtsAcheHai</h1>
+        </div>
+
+
     </div>
+
 
     <script>
         var refreshiframe = function() {
