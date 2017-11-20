@@ -6,7 +6,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Pixolo Webworks">
+
+    <meta name="keywords" content="Best CBSE tuitions, Maths CBSE, Science CBSE, VIII tutorials, IX tutorials, X tutorials, NCERT classes, Physics, Chemistry, Biology, Maths, English, Social Studies, SS, S.S., History, Geography, Literature, English, Economics, 8, 9, 10, 8th, 9th , 10th, Doubts, Assignment, Smart, Smart Board, App, Education, Higher secondary, Ahmedabad, Gujarat, Classroom tuition">
 
     <title>Sunalis Classes</title>
     <!--Favicon-->
@@ -86,20 +88,9 @@
                     </div>
                 </div>
                 <div class="col-lg-4 my-auto">
-                    <div class="device-container">
-                        <div class="device-mockup portrait white">
-                            <div class="device">
-                                <div class="screen">
-                                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                    <iframe class="inqappframe" src="http://sunalisclasses.com/doubtsachehai/platforms/browser/www/#/intro" style="height: 100%;width: 100%"></iframe>
-
-                                </div>
-                                <div class="button">
-                                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="http://sunalisclasses.com/doubts/">
+                        <img src="img/sunalis_mob_screen.png" width="100%" />
+                    </a>
                 </div>
             </div>
         </div>
@@ -742,16 +733,16 @@
 
     </script>
 
-    <script src="https://www.gstatic.com/firebasejs/4.6.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
     <script>
         // Initialize Firebase
         var config = {
-            apiKey: "AIzaSyBeW3pyZfgrSS6sLdSdSZB1i1efK427FoI",
-            authDomain: "sunaliswebsite.firebaseapp.com",
-            databaseURL: "https://sunaliswebsite.firebaseio.com",
-            projectId: "sunaliswebsite",
-            storageBucket: "sunaliswebsite.appspot.com",
-            messagingSenderId: "742539228177"
+            apiKey: "AIzaSyAuoMQctD9mi0meHjZfgDPh9ffXnhulcTA",
+            authDomain: "sunalis-classes-website.firebaseapp.com",
+            databaseURL: "https://sunalis-classes-website.firebaseio.com",
+            projectId: "sunalis-classes-website",
+            storageBucket: "sunalis-classes-website.appspot.com",
+            messagingSenderId: "645182903702"
         };
         firebase.initializeApp(config);
 
@@ -768,11 +759,12 @@
         /*GET GALLERY IMAGE NAMES FROM DATABASE*/
         firebase.database().ref('/gallery').once('value').then(function(snapshot) {
             for (var gi = 1; gi < snapshot.val().length; gi++) {
-                storageRef.child('gallery/' + snapshot.val()[gi]).getDownloadURL().then(function(url) {
-                    add_image_to_gallery(url);
-                }).catch(function(error) {
-                    console.log("Could not get ", snapshot.val()[gi]);
-                });
+                add_image_to_gallery(snapshot.val()[gi]);
+                /* storageRef.child('gallery/' + snapshot.val()[gi]).getDownloadURL().then(function(url) {
+                     
+                 }).catch(function(error) {
+                     console.log("Could not get ", snapshot.val()[gi]);
+                 });*/
             }
         });
 
@@ -923,7 +915,7 @@
                         console.log(blogs[selectedblog].title);
                         $('.blog-modal-title').html(blogs[selectedblog].title);
                         $('.blog-modal-date').html(blogs[selectedblog].date);
-                        $('.blog-modal-image').attr("src",blogs[selectedblog].image);
+                        $('.blog-modal-image').attr("src", blogs[selectedblog].image);
                         $('.blog-modal-blog').html(blogs[selectedblog].blog);
                     });
                 }
