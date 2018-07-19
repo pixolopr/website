@@ -1,0 +1,213 @@
+/*!
+ * Start Bootstrap - New Age v4.0.0-beta.2 (https://startbootstrap.com/template-overviews/new-age)
+ * Copyright 2013-2018 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-new-age/blob/master/LICENSE)
+ */
+/* Import Fonts */
+@font-face {
+  font-family: Cera;
+  src: url(Cera.otf); }
+
+html,
+body {
+  width: 100%;
+  height: 100%; }
+
+body {
+  font-family: 'Cera','Muli', 'Helvetica', 'Arial', 'sans-serif'; }
+
+a {
+  color: #00d2df;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s; }
+  a:hover, a:focus {
+    color: #00a2ac; }
+
+hr {
+  max-width: 100px;
+  margin: 25px auto 0;
+  border-width: 1px;
+  border-color: rgba(34, 34, 34, 0.1); }
+
+hr.light {
+  border-color: white; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Cera','Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 200;
+  letter-spacing: 1px; }
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px; }
+
+section {
+  padding: 20px 0; }
+  section h2 {
+    font-size: 50px; }
+
+.full-width {
+  width: 100%; }
+
+@media screen and (max-width: 767px) {
+  .mobile-hide {
+    display: none; } }
+
+@media screen and (min-width: 767px) {
+  .mobile-show {
+    display: none; } }
+
+/*scroll bar*/
+.scroll-style::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #F5F5F5; }
+
+.scroll-style::-webkit-scrollbar {
+  width: 10px;
+  background-color: #F5F5F5; }
+
+.scroll-style::-webkit-scrollbar-thumb {
+  background-color: #0ae;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.5, rgba(255, 255, 255, 0.2)), color-stop(0.5, transparent), to(transparent)); }
+
+#mainNav {
+  border-color: rgba(34, 34, 34, 0.05);
+  background-color: white;
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
+  font-family: 'Cera','Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+  font-weight: 200;
+  letter-spacing: 1px; }
+  #mainNav .navbar-brand {
+    color: #fc9f20;
+    font-family: 'Cera','Catamaran', 'Helvetica', 'Arial', 'sans-serif';
+    font-weight: 200;
+    letter-spacing: 1px; }
+
+@medi screen and (max-width: $break-tablet) {
+  #mainNav .navbar-brand {
+    width: 50%; } }
+    #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+      color: #00a2ac; }
+  #mainNav .navbar-toggler {
+    font-size: 12px;
+    padding: 8px 10px;
+    color: #222222; }
+  #mainNav .navbar-nav > li > a {
+    font-size: 11px;
+    font-family: 'Lato', 'Helvetica', 'Arial', 'sans-serif';
+    letter-spacing: 2px;
+    text-transform: uppercase; }
+    #mainNav .navbar-nav > li > a.active {
+      color: #00d2df !important;
+      background-color: transparent; }
+      #mainNav .navbar-nav > li > a.active:hover {
+        background-color: transparent; }
+  #mainNav .navbar-nav > li > a,
+  #mainNav .navbar-nav > li > a:focus {
+    color: #222222; }
+    #mainNav .navbar-nav > li > a:hover,
+    #mainNav .navbar-nav > li > a:focus:hover {
+      color: #00d2df; }
+  @media (min-width: 992px) {
+    #mainNav {
+      border-color: transparent;
+      background-color: transparent; }
+      #mainNav .navbar-brand {
+        color: fade(white, 70%); }
+        #mainNav .navbar-brand:hover, #mainNav .navbar-brand:focus {
+          color: white; }
+      #mainNav .navbar-nav > li > a,
+      #mainNav .navbar-nav > li > a:focus {
+        color: rgba(255, 255, 255, 0.7); }
+        #mainNav .navbar-nav > li > a:hover,
+        #mainNav .navbar-nav > li > a:focus:hover {
+          color: white; }
+      #mainNav.navbar-shrink {
+        border-color: rgba(34, 34, 34, 0.1);
+        background-color: white; }
+        #mainNav.navbar-shrink .navbar-brand {
+          color: #222222; }
+          #mainNav.navbar-shrink .navbar-brand:hover, #mainNav.navbar-shrink .navbar-brand:focus {
+            color: #00d2df; }
+        #mainNav.navbar-shrink .navbar-nav > li > a,
+        #mainNav.navbar-shrink .navbar-nav > li > a:focus {
+          color: #222222; }
+          #mainNav.navbar-shrink .navbar-nav > li > a:hover,
+          #mainNav.navbar-shrink .navbar-nav > li > a:focus:hover {
+            color: #00d2df; } }
+
+header.masthead {
+  position: relative;
+  width: 100%;
+  padding-top: 150px;
+  padding-bottom: 100px;
+  color: white;
+  background: url("../img/bg-pattern.png"), #ffe900;
+  background: url("../img/bg-pattern.png"), -webkit-linear-gradient(to left, #00d2df, #00949d);
+  background: url("../img/bg-pattern.png"), linear-gradient(to left, #00d2df, #00949d); }
+  header.masthead .header-content {
+    max-width: 500px;
+    margin-bottom: 100px;
+    text-align: center; }
+    header.masthead .header-content h1 {
+      font-size: 30px; }
+  header.masthead .device-container {
+    max-width: 435px;
+    margin-right: auto;
+    margin-left: auto; }
+    header.masthead .device-container .screen img {
+      border-radius: 3px; }
+  @media (min-width: 992px) {
+    header.masthead {
+      height: 100vh;
+      min-height: 775px;
+      padding-top: 0;
+      padding-bottom: 0; }
+      header.masthead .header-content {
+        margin-bottom: 0;
+        text-align: left; }
+        header.masthead .header-content h1 {
+          font-size: 50px; }
+      header.masthead .device-container {
+        max-width: 435px; } }
+
+.inqappframe:-webkit-scrollbar {
+  width: 0px; }
+
+.try-button {
+  display: flex;
+  align-content: center;
+  font-size: 21px !important;
+  border-bottom: 2px white solid;
+  width: 72%;
+  padding: 15px !important;
+  border-top: 2px white solid;
+  background: rgba(255, 255, 255, 0.11); }
+  @media screen and (max-width: 990px) {
+    .try-button {
+      margin: auto; } }
+  .try-button i {
+    font-size: 30px;
+    padding: 0px 10px;
+    animation: showright 1s infinite;
+    -webkit-animation: showright 1s infinite; }
+    @media screen and (max-width: 990px) {
+      .try-button i {
+        display: none;
+        animation: none;
+        -webkit-animation: none; } }
+
+@keyframes showright {
+  0% {
+    margin-left: 0px; }
+  100% {
+    margin-left: 10px; } }

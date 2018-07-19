@@ -29,6 +29,19 @@ gulp.task('sass', function() {
     }))
 });
 
+// Compiles SCSS files from /scss into /css
+gulp.task('sass2', function() {
+  return gulp.src('scss/atf.scss')
+    .pipe(sass())
+    .pipe(header(banner, {
+      pkg: pkg
+    }))
+    .pipe(gulp.dest('css'))
+    .pipe(browserSync.reload({
+      stream: true
+    }))
+});
+
 // Minify compiled CSS
 gulp.task('minify-css', ['sass'], function() {
   return gulp.src('css/new-age.css')
@@ -105,7 +118,7 @@ gulp.task('browserSync', function() {
 })
 
 // Dev task with browserSync
-gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js'], function() {
+gulp.task('dev', ['browserSync', 'sass', 'minify-css', 'minify-js', 'sass2'], function() {
   gulp.watch('scss/*.scss', ['sass']);
   gulp.watch('css/*.css', ['minify-css']);
   gulp.watch('js/*.js', ['minify-js']);
